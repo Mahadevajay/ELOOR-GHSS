@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <meta name="description" content="ELOOR GHSS is a government higher secondary school in Kerala offering Science, Commerce, and Arts streams with excellent facilities and results.">
+<meta name="keywords" content="ELOOR GHSS, Higher Secondary School, Kerala School, +1 +2 Admissions, Government School, Eloor, Science Commerce Arts">
+<meta name="author" content="ELOOR GHSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Eloor GHSS - Where Learning and Creativity Meets </title> 
-     <!-- META DATA -->
-  <meta name="description" content="Official website of GHSS Eloor, Kerala. Find school news, announcements, student info, and more.">
-  <meta name="keywords" content="GHSS Eloor, school, Kerala school, government school, Eloor, education">
-  <meta name="author" content="Mahi (Mahadev Ajay)">
+    <title>ERLOOR GHSS - Government Higher Secondary School</title>
     <style>
         * {
             margin: 0;
@@ -17,421 +17,557 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            overflow-x: hidden;
-            color: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Animated Background Particles */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            line-height: 1.6;
+            color: #333;
         }
 
         /* Header */
-        header {
-            position: relative;
-            z-index: 10;
-            padding: 20px 0;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        nav {
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .logo {
-            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: glow 2s ease-in-out infinite alternate;
+            color: #1e3c72;
+            font-size: 1.2rem;
         }
 
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5)); }
-            to { filter: drop-shadow(0 0 20px rgba(255, 217, 61, 0.8)); }
+        .school-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
         }
 
-        .nav-links {
+        .school-info p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .nav {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 2rem;
+            padding: 1rem 0;
         }
 
-        .nav-links a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            position: relative;
-            z-index: 10;
-            padding: 100px 0;
-            text-align: center;
-            min-height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f8ff" width="1200" height="600"/><circle fill="%23e6f3ff" cx="200" cy="150" r="80"/><circle fill="%23d9edff" cx="800" cy="300" r="120"/><circle fill="%23cce7ff" cx="1000" cy="100" r="60"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
         }
 
-        .hero-content {
-            max-width: 800px;
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideUp 1s ease-out;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: slideUp 1s ease-out 0.2s both;
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(45deg, #ff6b6b, #ffa726);
             color: white;
-            text-decoration: none;
+            padding: 1rem 2rem;
+            border: none;
             border-radius: 50px;
-            font-weight: bold;
             font-size: 1.1rem;
+            cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-            animation: slideUp 1s ease-out 0.4s both;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 6px 20px rgba(255,107,107,0.6);
         }
 
-        /* Features Section */
-        .features {
-            position: relative;
-            z-index: 10;
-            padding: 100px 0;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
-        .features h2 {
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 60px;
-            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1e3c72;
+            position: relative;
         }
 
-        .features-grid {
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ffa726);
+            border-radius: 2px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        /* News Section */
+        .news-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Admissions Section */
+        .admission-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
             border-radius: 20px;
             text-align: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 3rem 0;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        .admission-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #ffd93d;
+        .admission-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
         /* Footer */
-        footer {
-            position: relative;
-            z-index: 10;
-            padding: 40px 0;
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ffa726;
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ffa726;
+        }
+
+        .footer-bottom {
             text-align: center;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 2rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .nav-toggle {
+                display: block;
             }
-            
-            .nav-links {
-                gap: 15px;
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1e3c72;
+                padding: 1rem 2rem;
             }
-            
-            .features-grid {
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .cards-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+            .school-info h1 {
+                font-size: 1.3rem;
+            }
         }
-
-        /* Interactive Elements */
-        .interactive-orb {
-            position: fixed;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 107, 107, 0.3), rgba(255, 217, 61, 0.3));
-            pointer-events: none;
-            z-index: 5;
-            transition: all 0.1s ease;
-            opacity: 0;
-        }
-
-        /* School Gallery Images */
-.school-photo {
-    width: 100%;
-    max-width: 220px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-.school-photo:hover {
-    transform: scale(1.04);
-}
-.school-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding-top: 30px;
-    flex-wrap: wrap;
-}
-    </style> 
+    </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation" id="particles"></div>
-    
-    <!-- Interactive Orb -->
-    <div class="interactive-orb" id="orb"></div>
-
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">ELOOR GHSS</div>
-            <ul class="nav-links">
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+               <div class="logo">
+    <img src="https://uploads.onecompiler.io/43qutw7f9/43qutk9ng/favicon.png" alt="ELOOR GHSS Logo">
+               </div>
+                <div class="school-info">
+                    <h1>ELOOR GHSS</h1>
+                    <p>Government Higher Secondary School</p>
+                </div>
+            </div>
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-</header>
-
-<!-- School Gallery at Top -->
-<div class="school-gallery" style="display:flex;justify-content:center;gap:24px;padding:30px 0 0 0;">
-    <img src="unnamed (1).webp" alt="School view 1" class="school-photo">
-    <img src="unnamed.webp" alt="School view 2" class="school-photo">
-</div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>ELOOR GHSS</h1>
-                <p>Rooted in Knowledge, Rising to Excellence.</p>
-                <a href="#features" class="cta-button">Discover more about us</a>
-            </div>
+        <div class="hero-content">
+            <h2>Excellence in Higher Secondary Education</h2>
+            <p>Empowering students for success in +1 and +2 programs</p>
+            <a href="#admissions" class="cta-button">ABOUT US</a>
         </div>
     </section>
-    
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2>ABOUT US</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👨🏻‍🏫</div>
-                    <h3>LOVING AND SINCERE TEACHERS</h3>
-                    <p>Our dedicated faculty members are passionate about education and committed to nurturing every student's potential with care and expertise.</p>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2>About ELOOR GHSS</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+                ELOOR Government Higher Secondary School is a premier educational institution committed to providing quality education in +1 and +2 programs. We focus on holistic development, academic excellence, and character building to prepare students for higher education and successful careers.
+            </p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Academic Excellence</h3>
+                    <p>Comprehensive curriculum covering Science, Commerce, and Arts streams with experienced faculty and modern teaching methodologies.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"> </div>
-                    <h3>What We Provide</h3>
-                    <p>Beautiful, modern classrooms with interactive labs and state-of-the-art facilities to enhance the learning experience.</p>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Proven Results</h3>
+                    <p>Consistent track record of outstanding board exam results and successful placements in prestigious colleges and universities.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>OUR AIM</h3>
-                    <p>Our aim is not just to build students but to nurture geniuses who will shape the future with knowledge and creativity.</p>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Holistic Development</h3>
+                    <p>Focus on overall personality development through sports, cultural activities, and leadership programs.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <div class="features-grid">
-    <div class="feature-card">
-        <img src="data:image/jpeg;base64,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" alt="Science Lab" style="width:100%;border-radius:12px;margin-bottom:16px;">
-        <div class="feature-icon">🔬</div>
-        <h3>Science & Commerce Labs</h3>
-        <p>State-of-the-art labs for science and commerce subjects, providing hands-on learning and practical experience for every student.</p>
-    </div>
-    <div class="feature-card">
-        <img src="data:image/jpeg;base64,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" alt="Smart Classroom" style="width:100%;border-radius:12px;margin-bottom:16px;">
-        <div class="feature-icon">💻</div>
-        <h3>Smart Classroom</h3>
-        <p>Modern smart classroom equipped with the latest technology to make learning interactive, engaging, and effective.</p>
-    </div>
-    <!-- ...other feature cards... -->
-</div>
+        </section>
 
-    <section id="contact" style="position:relative;z-index:10;padding:80px 0;background:rgba(0,0,0,0.1);backdrop-filter:blur(10px);">
-    <div class="container" style="max-width:600px;text-align:center;">
-        <h2 style="font-size:2.5rem;margin-bottom:30px;background:linear-gradient(45deg,#ff6b6b,#ffd93d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Contact Us</h2>
-        <p style="font-size:1.2rem;margin-bottom:20px;">Have questions or want to get in touch? Reach out to us!</p>
-        <div style="font-size:1.1rem;line-height:2;">
-            <strong>Email:</strong> <a href="mailto:eloorghss@email.com" style="color:#ffd93d;text-decoration:none;">eloorghss@email.com</a><br>
-            <strong>Phone:</strong> <a href="tel:04842545440" style="color:#ffd93d;text-decoration:none;">+91 0484 254 5440</a><br>
-            <strong>Address:</strong> Eloor GHSS, Eloor, Ernakulam, Kerala, India
-        </div>
-    </div>
-</section>
+        <!-- Academics Section -->
+        <section class="section" id="academics">
+            <h2>Academic Programs</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Science Stream</h3>
+                    <p>Physics, Chemistry, Mathematics, Biology - preparing students for engineering, medical, and research careers.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3>Commerce Stream</h3>
+                    <p>Business Studies, Economics, Accountancy - foundation for careers in business, finance, and management.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="about" style="position:relative;z-index:10;padding:80px 0;background:rgba(0,0,0,0.08);backdrop-filter:blur(8px);">
-    <div class="container" style="max-width:800px;text-align:center;">
-        <h2 style="font-size:2.5rem;margin-bottom:30px;background:linear-gradient(45deg,#45b7d1,#ffd93d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">About Eloor GHSS</h2>
-        <p style="font-size:1.2rem;line-height:2;">
-            Eloor GHSS is a vibrant learning community dedicated to nurturing young minds. Our school blends tradition and innovation, offering modern facilities, passionate teachers, and a supportive environment. We believe in holistic education, encouraging creativity, critical thinking, and personal growth. Join us as we empower students to excel and shape a brighter future.
-        </p>
-    </div>
-</section>
+        <!-- Admissions Section -->
+        <section class="section" id="admissions">
+            <h2>Admissions</h2>
+            <div class="admission-highlight">
+                <h3>KNOW US</h3>
+                <p>Join our prestigious institution and embark on a journey of academic excellence</p>
+                <a href="#contact" class="cta-button">Get More Info</a>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Eligibility</h3>
+                    <p>Students who have completed 10th standard with minimum required percentage as per government guidelines.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Important Dates</h3>
+                    <p>Application forms available from March 2025. Last date for submission: May 2025. Merit list publication: June 2025.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>Required Documents</h3>
+                    <p>10th mark sheet, transfer certificate, community certificate, income certificate, and passport-size photographs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="section" id="facilities">
+            <h2>Our Facilities</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Science Laboratories</h3>
+                    <p>Well-equipped Physics, Chemistry, and Biology labs with modern instruments and safety measures.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Library</h3>
+                    <p>Comprehensive library with over 10,000 books, journals, and digital resources for research and study.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Computer Lab</h3>
+                    <p>Modern computer laboratory with high-speed internet connectivity and latest software applications.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏃</div>
+                    <h3>Sports Complex</h3>
+                    <p>Playground, basketball court, and indoor sports facilities for physical fitness and recreation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="section" id="achievements">
+            <h2>Recent Achievements</h2>
+          
+            <div class="news-item">
+                <div class="news-date">February 2025</div>
+                <div class="news-title">100% Pass Rate in Board Exams</div>
+                <p>Achieved 100% pass rate in both +1 and +2 board examinations for the academic year 2024-25.</p>
+            </div>
+            <div class="news-item">
+                <div class="news-date">January 2025</div>
+                <div class="news-title">Inter-School Cultural Competition Winners</div>
+                <p>Our cultural team secured first position in the district-level inter-school cultural competition.</p>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Eloor GHSS. Crafted with passion for education.</p>
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>📍 ELOOR GHSS Campus<br>
+                   Rloor, Kerala, India</p>
+                <p>📞 Phone: +91 0484 254 5440</p>
+                <p>✉️ Email: eloorghss@email.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academic Programs</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Important Links</h3>
+                <ul>
+                    <li><a href="#">Kerala State Board</a></li>
+                    <li><a href="#">NCERT Resources</a></li>
+                    <li><a href="#">Exam Results</a></li>
+                    <li><a href="#">Scholarship Information</a></li>
+                    <li><a href="#">Career Guidance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>School Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 4:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+                <p>Office Hours: 9:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RLOOR Government Higher Secondary School. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Create floating particles
-        function createParticles() {
-            const particleContainer = document.getElementById('particles');
-            
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                particleContainer.appendChild(particle);
-            }
-        }
-
-        // Interactive orb that follows cursor
-        const orb = document.getElementById('orb');
-        let mouseX = 0;
-        let mouseY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateOrb() {
-            orb.style.left = mouseX - 50 + 'px';
-            orb.style.top = mouseY - 50 + 'px';
-            orb.style.opacity = '1';
-            requestAnimationFrame(animateOrb);
+        function toggleNav() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
         }
 
         // Smooth scrolling for navigation links
@@ -445,31 +581,45 @@
                         block: 'start'
                     });
                 }
+                
+                // Close mobile menu if open
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
             });
         });
 
-        // Add interactive hover effects to feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 60, 114, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+            }
         });
 
-        // Initialize everything
-        createParticles();
-        animateOrb();
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Add some dynamic color changes
-        setInterval(() => {
-            const particles = document.querySelectorAll('.particle');
-            particles.forEach(particle => {
-                particle.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.3)`;
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
-        }, 3000);
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>
